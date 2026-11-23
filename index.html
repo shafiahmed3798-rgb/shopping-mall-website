@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grand Plaza Shopping Mall</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #172554;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 5px;
+        }
+
+        .container {
+            display: flex;
+            height: 80vh;
+        }
+
+        nav {
+            width: 220px;
+            background-color: #1e3a8a;
+            padding-top: 20px;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            background-color: #3b82f6;
+        }
+
+        main {
+            flex: 1;
+            background-color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        main h2 {
+            color: #172554;
+        }
+
+        footer {
+            background-color: #172554;
+            color: white;
+            text-align: center;
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>GRAND PLAZA MALL</h1>
+    <p>Your World of Shopping, Food and Entertainment!</p>
+</header>
+
+<div class="container">
+
+    <nav>
+        <a href="#" onclick="showPage('Home')">Home</a>
+
+        <a href="#" onclick="showPage('Fashion & Apparel')">
+            Fashion & Apparel
+        </a>
+
+        <a href="#" onclick="showPage('Food Court')">
+            Food Court
+        </a>
+
+        <a href="#" onclick="showPage('Cinema')">
+            Cinema
+        </a>
+
+        <a href="#" onclick="showPage('Contact Us')">
+            Contact Us
+        </a>
+    </nav>
+
+    <main id="content">
+        <h2>Welcome to Grand Plaza Mall</h2>
+        <p>Enjoy shopping, delicious food and exciting movies!</p>
+        <h3>Everything You Love, All in One Place.</h3>
+    </main>
+
+</div>
+
+<footer>
+    <p>Designed by: Shafi Ahmed | Register Number: 212225240143</p>
+</footer>
+
+<script>
+    function showPage(page) {
+
+        let content = document.getElementById("content");
+
+        if (page === "Home") {
+            content.innerHTML = `
+                <h2>Welcome to Grand Plaza Mall</h2>
+                <p>Enjoy shopping, delicious food and exciting movies!</p>
+                <h3>Everything You Love, All in One Place.</h3>
+            `;
+        }
+
+        else if (page === "Fashion & Apparel") {
+            content.innerHTML = `
+                <h2>Fashion & Apparel</h2>
+                <p>Explore the latest fashion trends.</p>
+                <p>Clothing | Footwear | Accessories</p>
+            `;
+        }
+
+        else if (page === "Food Court") {
+            content.innerHTML = `
+                <h2>Food Court</h2>
+                <p>Enjoy delicious food with your family and friends.</p>
+                <p>Pizza | Burgers | Indian Food | Desserts</p>
+            `;
+        }
+
+        else if (page === "Cinema") {
+            content.innerHTML = `
+                <h2>Cinema</h2>
+                <p>Experience movies with our big screens.</p>
+                <p>Book your favourite movie and enjoy!</p>
+            `;
+        }
+
+        else if (page === "Contact Us") {
+            content.innerHTML = `
+                <h2>Contact Us</h2>
+                <p>Grand Plaza Shopping Mall</p>
+                <p>Email: grandplazamall@gmail.com</p>
+                <p>Phone: 9876543210</p>
+            `;
+        }
+    }
+</script>
+
+</body>
+</html>
